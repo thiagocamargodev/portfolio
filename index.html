@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Thiago</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Thiago Camargo</title>
+    <link rel="icon" href="/images/joystick.png" type="image/png">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     
@@ -28,11 +29,23 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <div style="text-align: center;">
-                <h1>Portfólio Unreal Engine</h1>
-                <p>Desenvolvedor de Jogos e Experiências Interativas</p>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=1200&h=600&fit=crop" alt="Game 1" class="carousel-image active">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=1200&h=600&fit=crop" alt="Game 2" class="carousel-image">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&h=600&fit=crop" alt="Game 3" class="carousel-image">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&h=600&fit=crop" alt="Game 4" class="carousel-image">
+            </div>
+            <div class="carousel-overlay">
+                <h1>UI Developer Thiago</h1>
+                <p>Bringing game worlds to life through interface.</p>
                 <a href="#projetos" class="btn">Ver Projetos</a>
+            </div>
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(0)"></span>
+                <span class="indicator" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
             </div>
         </div>
     </section>
@@ -40,12 +53,23 @@
     <!-- About Section -->
     <section id="about" class="bg-secondary">
         <div class="container">
-            <h2>Sobre Mim</h2>
+            <h2>About Me</h2>
             <div class="about-content">
-                <p>
-                    Desenvolvedor especializado em Unreal Engine com paixão por criar experiências imersivas e inovadoras. 
-                    Com expertise em design de jogos, programação e otimização de performance, transformo ideias em realidade digital.
-                </p>
+                <div class="about-image">
+                    <img src="/images/thiago.jfif" alt="Thiago Camargo">
+                </div>
+                <div class="about-text">
+                    <p>
+                       My name is Thiago, and I have around a year and a half of experience with Unreal Engine. I’m passionate about both story-driven and competitive games.
+                       Currently, I work as a UI Developer, constantly seeking new technologies and best practices to improve my projects and grow professionally.
+                    </p>
+                    <p>
+                       I’m currently working at Cosmo Studio, where we’re developing a medieval game called The Bandona’s Story. 
+                       I’ve been part of the team for about a year and a half, mainly focusing on UI implementation. 
+                       I always strive to apply good development practices, keeping the code clean and organized, while contributing to the continuous improvement of the project’s workflow.
+
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -53,17 +77,22 @@
     <!-- Experiência Section -->
     <section id="experiencia">
         <div class="container">
-            <h2>Experiência</h2>
-            <div class="experience-container">
-                <div class="experience-item">
-                    <h3>Desenvolvedor Unreal Engine</h3>
-                    <p class="date">2022 - Presente</p>
-                    <p>Desenvolvimento de jogos e experiências interativas utilizando Unreal Engine 5, incluindo implementação de mecânicas, otimização e design de níveis.</p>
+            <h2>Experencie</h2>
+            <div class="experience-grid">
+                <!-- Experiência 1 -->
+                <div class="experience-card" onclick="openExperience(1)">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop" alt="Experiência 1">
+                    <div class="experience-overlay">
+                        <div class="experience-title">UI Developer</div>
+                    </div>
                 </div>
-                <div class="experience-item">
-                    <h3>Game Designer</h3>
-                    <p class="date">2020 - 2022</p>
-                    <p>Criação de conceitos de jogos, prototipagem e documentação de design, focando em gameplay balanceado e experiências envolventes.</p>
+
+                <!-- Experiência 2 -->
+                <div class="experience-card" onclick="openExperience(2)">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop" alt="Experiência 2">
+                    <div class="experience-overlay">
+                        <div class="experience-title">UX Designer</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,16 +108,16 @@
                     <p>Game Engine</p>
                 </div>
                 <div class="tech-item">
-                    <h3>C++</h3>
-                    <p>Programação</p>
+                    <h3>Figma</h3>
+                    <p>Mockups</p>
                 </div>
                 <div class="tech-item">
                     <h3>Blueprints</h3>
                     <p>Visual Scripting</p>
                 </div>
                 <div class="tech-item">
-                    <h3>Blender</h3>
-                    <p>Modelagem 3D</p>
+                    <h3>Sharders</h3>
+                    <p>Material Unreal</p>
                 </div>
             </div>
         </div>
@@ -104,7 +133,7 @@
                 <div class="project-card" onclick="openProject(1)">
                     <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&h=600&fit=crop" alt="Projeto 1">
                     <div class="project-overlay">
-                        <div class="project-title">RPG Medieval Fantasy</div>
+                        <div class="project-title">UI Component</div>
                     </div>
                 </div>
 
@@ -196,7 +225,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script/script.js"></script>
 
 </body>
 </html>
